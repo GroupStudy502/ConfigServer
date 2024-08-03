@@ -1,0 +1,71 @@
+server:
+  port: 3002
+
+spring:
+  # 데이터베이스 설정
+  datasource:
+    driverClassName: '{cipher}580f91dae99ab42d1aab2a217c84154eac2b1faab2a840c88e3c48d6d73bcbfcc5e981c99bff9231d4e3c79a40d379e0'
+    url: '{cipher}3ff904c2f6ece8db769b5d860a82322fc339711bfe640659dcef4f7cad31ddfa625ed69ff1b29b460c970b3b6ba14450995f850bb128bfa3f4ec49a2f19a883b'
+    username: ${db.username}
+    password: ${db.password}
+
+  # JPA 설정
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+        use_sql_comments: true
+    hibernate:
+      ddlAuto: create
+
+  # 파일 업로드 용량 설정
+  servlet:
+    multipart:
+      maxFileSize: 20MB
+      maxRequestSize: 60MB
+      fileSizeThreshold: 30MB
+
+  # 정적 자원 설정(CSS, JS, 이미지)
+  web:
+    resources:
+      staticLocations: classpath:/static/
+
+  # 타임리프 설정
+    thymeleaf:
+      cache: true
+      prefix: classpath:/templates/
+
+  # 로거 설정
+  logging:
+    level:
+      org.hibernate.type: trace
+      org.hibernate.orm.jdbc.bind: trace
+
+  # 파일 업로드 경로 설정
+  file:
+    upload:
+      path: ${file.path}
+      url: /upload/
+
+# 유레카 설정
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: ${eurekaHost}/eureka/
+
+  # 액추에이터 설정
+  management:
+    endpoint:
+      health:
+        showDetails: always
+      refresh:
+        enabled: true
+    endpoints:
+      web:
+        exposure:
+          include: health, refresh
