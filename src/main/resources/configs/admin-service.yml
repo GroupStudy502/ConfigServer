@@ -1,5 +1,8 @@
 server:
   port: 3002
+  servlet:
+    cookie:
+      name: SESSIONID
 
 spring:
   # 데이터베이스 설정
@@ -8,6 +11,14 @@ spring:
     url: '{cipher}3ff904c2f6ece8db769b5d860a82322fc339711bfe640659dcef4f7cad31ddfa625ed69ff1b29b460c970b3b6ba14450995f850bb128bfa3f4ec49a2f19a883b'
     username: ${db.username}
     password: ${db.password}
+  session:
+    store-type: redis
+    redis:
+      namespace: spring:session
+  data:
+    redis:
+      host: ${redis.host}
+      port: ${redis.port}
 
   # JPA 설정
   jpa:
