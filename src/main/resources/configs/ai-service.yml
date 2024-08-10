@@ -1,0 +1,24 @@
+server:
+  port: 3003
+
+spring:
+  ai:
+    openai:
+      apiKey: ${openAiKey}
+
+    vertex:
+      ai:
+        gemini:
+          projectId: ${gemini.projectId}
+          location: asia-northeast3
+
+# 유레카 설정
+eureka:
+  instance:
+    hostname: ${hostname}
+    #preferIpAddress: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: ${eurekaHost}/eureka/
