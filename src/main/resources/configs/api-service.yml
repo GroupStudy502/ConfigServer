@@ -71,4 +71,4 @@ file:
     path: ${fileUpload.path}
     url: /upload/
 
-secreetKey: ${secretKey}
+secretKey: ${secretKey}
