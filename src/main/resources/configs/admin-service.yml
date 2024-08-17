@@ -82,4 +82,4 @@ eureka:
         exposure:
           include: health, refresh
 
-secretKey: ${secretKey}
+secretKey: ${secret}
