@@ -81,3 +81,5 @@ eureka:
       web:
         exposure:
           include: health, refresh
+
+secretKey: ${secret}
