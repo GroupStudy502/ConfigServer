@@ -2,6 +2,11 @@ server:
   port: 3001
 
 spring:
+  data:
+    redis:
+      host: ${redis.host}
+      port: ${redis.port}
+
   # 데이터베이스 설정
   datasource:
     driverClassName: '{cipher}580f91dae99ab42d1aab2a217c84154eac2b1faab2a840c88e3c48d6d73bcbfcc5e981c99bff9231d4e3c79a40d379e0'
