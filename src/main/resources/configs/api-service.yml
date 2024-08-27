@@ -9,8 +9,8 @@ spring:
 
   # 데이터베이스 설정
   datasource:
-    driverClassName: '{cipher}580f91dae99ab42d1aab2a217c84154eac2b1faab2a840c88e3c48d6d73bcbfcc5e981c99bff9231d4e3c79a40d379e0'
-    url: '{cipher}3ff904c2f6ece8db769b5d860a82322fc339711bfe640659dcef4f7cad31ddfa625ed69ff1b29b460c970b3b6ba14450995f850bb128bfa3f4ec49a2f19a883b'
+    driverClassName: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@${db.host}:${db.port}:XE
     username: ${db.username}
     password: ${db.password}
 
