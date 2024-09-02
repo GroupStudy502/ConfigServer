@@ -68,7 +68,7 @@ jwt:
 
 cors:
   allow:
-    origins: http://jeommechu.xyz
+    origins: http://front.jeommechu.xyz:4000
 
 # 파일 업로드 경로 설정
 file:
