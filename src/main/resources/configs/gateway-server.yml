@@ -14,6 +14,7 @@ spring:
               - 'http://www.jeommechu.xyz'
               - 'http://jeommechu.xyz:4000'
               - 'http://www.jeommechu.xyz:4000'
+              - 'http://front.jeommechu.xyz:4000'
             allowCredentials: true # 요청시 인증 정보 전송 허가
             allowedHeaders: '*'
             allowedMethods: '*'
