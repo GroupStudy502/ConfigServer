@@ -13,6 +13,9 @@ spring:
       server:
         native:
           search-locations: classpath:/configs
-
+        git:
+          uri: https://github.com/hjchoirr/project_config.git
+          searchPaths: configs
+          default-label: master
 encrypt:
   key: ${secretKey}
