@@ -6,7 +6,7 @@ spring:
     name: config-server
 
   profiles:
-    active: native
+    active: native,git
 
   cloud:
     config:
@@ -14,8 +14,8 @@ spring:
         native:
           search-locations: classpath:/configs
         git:
-          uri: https://github.com/hjchoirr/project_config.git
-          searchPaths: configs
+          uri: https://github.com/hjchoirr/P5.git
+          searchPaths: project_config/configs
           default-label: master
 encrypt:
   key: ${secretKey}
